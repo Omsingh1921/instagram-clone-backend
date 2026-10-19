@@ -29,13 +29,17 @@ public class AuthController {
     private final IAuthService authService;
     private final IEmailPreferenceService emailPreferenceService;
     private final IEmailChangeService emailChangeService;
+    private final com.instagramclone.mail.provider.IEmailProvider emailProvider;
 
     @RateLimit(category = AuthConstants.RATE_LIMIT_SIGNUP_REQUEST_OTP, limit = 5, windowSeconds = 60)
     @PostMapping(AuthConstants.PATH_SIGNUP_REQUEST_OTP)
     @Operation(summary = "Request email OTP for signup", description = "Initiates staged registration OTP verification for uncommitted user")
     public ResponseEntity<ApiResponse<Void>> requestSignupOtp(@Valid @RequestBody SignupRequestOtpRequest request) {
         authService.requestSignupOtp(request);
-        return ResponseEntity.ok(ApiResponse.success(AuthConstants.MSG_SIGNUP_OTP_SENT, null));
+        String msg = (emailProvider != null && !emailProvider.isAvailable())
+                ? "Confirmation code sent. (Demo mode: Use OTP 123456)"
+                : AuthConstants.MSG_SIGNUP_OTP_SENT;
+        return ResponseEntity.ok(ApiResponse.success(msg, null));
     }
 
     @RateLimit(category = AuthConstants.RATE_LIMIT_SIGNUP_VERIFY_OTP, limit = 10, windowSeconds = 60)
@@ -51,7 +55,10 @@ public class AuthController {
     @Operation(summary = "Resend signup email OTP", description = "Resends 6-digit OTP for staged registration subject to cooldown")
     public ResponseEntity<ApiResponse<Void>> resendSignupOtp(@Valid @RequestBody SignupRequestOtpRequest request) {
         authService.requestSignupOtp(request);
-        return ResponseEntity.ok(ApiResponse.success(AuthConstants.MSG_SIGNUP_OTP_SENT, null));
+        String msg = (emailProvider != null && !emailProvider.isAvailable())
+                ? "New confirmation code sent. (Demo mode: Use OTP 123456)"
+                : AuthConstants.MSG_SIGNUP_OTP_SENT;
+        return ResponseEntity.ok(ApiResponse.success(msg, null));
     }
 
     @RateLimit(category = AuthConstants.RATE_LIMIT_CHECK_USERNAME, limit = 60, windowSeconds = 60)

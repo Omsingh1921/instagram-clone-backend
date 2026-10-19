@@ -144,8 +144,8 @@ public class EmailDispatcher {
             attempt++;
             try {
                 if (!emailProvider.isAvailable()) {
-                    log.info("Email provider unavailable/mock mode. Delivery simulated for [{}] to [{}]",
-                            type, formatRecipientForLog(command.getRecipientEmail(), type));
+                    log.info("[SIMULATED EMAIL] Email provider not configured. Delivery simulated for [{}] to [{}]. OTP Code: [{}]",
+                            type, formatRecipientForLog(command.getRecipientEmail(), type), vars.get("otpCode"));
                     deliveryLog.setStatus(EmailDeliveryStatus.DELIVERED_SIMULATED);
                     deliveryLog.setSentAt(LocalDateTime.now());
                     delivered = true;

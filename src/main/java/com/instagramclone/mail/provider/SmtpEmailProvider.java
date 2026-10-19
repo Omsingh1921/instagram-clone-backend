@@ -24,7 +24,17 @@ public class SmtpEmailProvider implements IEmailProvider {
 
     @Override
     public boolean isAvailable() {
-        return mailProperties.isEnabled() && mailSender != null;
+        if (!mailProperties.isEnabled() || mailSender == null) {
+            return false;
+        }
+        if (mailSender instanceof org.springframework.mail.javamail.JavaMailSenderImpl impl) {
+            String user = impl.getUsername();
+            String pass = impl.getPassword();
+            if (user == null || user.isBlank() || pass == null || pass.isBlank()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override

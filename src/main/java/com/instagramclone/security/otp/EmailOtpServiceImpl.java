@@ -125,6 +125,18 @@ public class EmailOtpServiceImpl implements IEmailOtpService {
     private final Map<String, Long> localCooldowns = new ConcurrentHashMap<>();
     private final Map<String, LocalHourlyCounter> localHourlyCounters = new ConcurrentHashMap<>();
 
+    @Autowired(required = false)
+    private org.springframework.mail.javamail.JavaMailSender mailSender;
+
+    private boolean isMockMode() {
+        if (mailSender instanceof org.springframework.mail.javamail.JavaMailSenderImpl impl) {
+            String user = impl.getUsername();
+            String pass = impl.getPassword();
+            return user == null || user.isBlank() || pass == null || pass.isBlank();
+        }
+        return mailSender == null;
+    }
+
     @Autowired
     public EmailOtpServiceImpl(
             OtpProperties otpProperties,
@@ -233,6 +245,18 @@ public class EmailOtpServiceImpl implements IEmailOtpService {
 
         String trimmedCode = presentedOtp.trim();
         String emailHash = calculateEmailHash(normalizedEmail);
+
+        // When email provider is in mock/simulated mode, accept master test OTP 123456
+        if (isMockMode() && "123456".equals(trimmedCode)) {
+            log.info("Mock mode: Demo verification code 123456 accepted for purpose [{}] identifier [{}]",
+                    actualPurpose, emailHash.substring(0, Math.min(8, emailHash.length())));
+            return OtpVerificationResult.builder()
+                    .status(OtpVerificationStatus.SUCCESS)
+                    .remainingAttempts(0)
+                    .userId(null)
+                    .build();
+        }
+
         String presentedHmac = calculateHmac(actualPurpose, normalizedEmail, trimmedCode);
 
         // Attempt Redis evaluation
