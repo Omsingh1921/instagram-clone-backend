@@ -33,15 +33,15 @@ import java.util.UUID;
 @SuperBuilder
 public class Comment extends BaseAuditableEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "post_id", nullable = false)
     private Post post;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "parent_comment_id", columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "parent_comment_id")
     private Comment parentComment;
 
     @Column(name = "text", nullable = false, columnDefinition = "TEXT")

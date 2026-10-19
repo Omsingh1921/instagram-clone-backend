@@ -37,14 +37,14 @@ import java.util.UUID;
 @SuperBuilder
 public class Report extends BaseAuditableEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "reporter_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "reporter_id", nullable = false)
     private User reporter;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "target_type", nullable = false, length = 30)
     private ReportTargetType targetType;
 
-    @Column(name = "target_id", nullable = false, columnDefinition = "BINARY(16)")
+    @Column(name = "target_id", nullable = false)
     private UUID targetId;
 
     @Column(name = "reason_code", nullable = false, length = 50)
@@ -59,7 +59,7 @@ public class Report extends BaseAuditableEntity {
     private ReportStatus status = ReportStatus.OPEN;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "reviewer_id", columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "reviewer_id")
     private User reviewer;
 
     @Enumerated(EnumType.STRING)

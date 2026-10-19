@@ -38,10 +38,10 @@ import java.util.UUID;
 @SuperBuilder
 public class Like extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "post_id", nullable = false)
     private Post post;
 }

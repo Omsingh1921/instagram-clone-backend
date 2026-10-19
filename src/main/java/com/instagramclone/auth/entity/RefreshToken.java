@@ -21,10 +21,10 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class RefreshToken extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column(name = "session_id", columnDefinition = "BINARY(16)", nullable = false)
+    @Column(name = "session_id", nullable = false)
     private UUID sessionId;
 
     @Column(name = "token_hash", nullable = false, unique = true, length = 255)

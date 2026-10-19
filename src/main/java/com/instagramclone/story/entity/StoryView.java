@@ -37,11 +37,11 @@ import java.util.UUID;
 @SuperBuilder
 public class StoryView extends BaseEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "story_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "story_id", nullable = false)
     private Story story;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @CreationTimestamp

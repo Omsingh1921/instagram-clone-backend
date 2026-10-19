@@ -21,7 +21,7 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class Profile extends BaseAuditableEntity {
 @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, unique = true, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
     private User user;
 
     @Column(name = "display_name", length = 100)

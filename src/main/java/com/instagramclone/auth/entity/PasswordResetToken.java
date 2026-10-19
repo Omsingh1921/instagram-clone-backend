@@ -21,7 +21,7 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class PasswordResetToken extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "token_hash", nullable = false, unique = true, length = 64)

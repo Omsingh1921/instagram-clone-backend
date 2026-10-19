@@ -25,7 +25,7 @@ import java.util.UUID;
 @SuperBuilder
 public class Media extends BaseAuditableEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "owner_id", nullable = false)
     private User owner;
 
     @Column(name = "public_id", nullable = false, length = 255)

@@ -23,7 +23,7 @@ import java.util.UUID;
 public class UserKnownDevice extends BaseCreatedEntity {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "device_identifier", nullable = false, length = 64)

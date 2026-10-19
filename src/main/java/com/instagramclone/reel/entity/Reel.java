@@ -36,7 +36,7 @@ import java.util.UUID;
 @SuperBuilder
 public class Reel extends BaseAuditableEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "video_url", nullable = false, length = 700)

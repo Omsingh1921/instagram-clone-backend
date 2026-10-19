@@ -23,7 +23,7 @@ import java.util.List;
 public class StoryHighlight extends BaseAuditableEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "title", nullable = false, length = 50)

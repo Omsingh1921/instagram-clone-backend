@@ -35,24 +35,24 @@ import java.util.UUID;
 @SuperBuilder
 public class Notification extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "recipient_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "recipient_id", nullable = false)
     private User recipient;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "actor_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "actor_id", nullable = false)
     private User actor;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false, length = 30)
     private NotificationType type;
 
-    @Column(name = "post_id", columnDefinition = "BINARY(16)")
+    @Column(name = "post_id")
     private UUID postId;
 
-    @Column(name = "comment_id", columnDefinition = "BINARY(16)")
+    @Column(name = "comment_id")
     private UUID commentId;
 
-    @Column(name = "reel_id", columnDefinition = "BINARY(16)")
+    @Column(name = "reel_id")
     private UUID reelId;
 
     @Column(name = "media_preview_url", length = 700)

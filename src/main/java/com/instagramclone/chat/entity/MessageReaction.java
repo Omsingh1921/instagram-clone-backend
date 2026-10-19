@@ -38,11 +38,11 @@ import java.time.LocalDateTime;
 public class MessageReaction extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "message_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "message_id", nullable = false)
     private Message message;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "emoji", nullable = false, length = 32)

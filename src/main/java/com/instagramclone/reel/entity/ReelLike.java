@@ -21,10 +21,10 @@ import java.util.UUID;
 @SuperBuilder
 public class ReelLike extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "reel_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "reel_id", nullable = false)
     private Reel reel;
 }

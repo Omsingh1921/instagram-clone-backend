@@ -24,11 +24,11 @@ import lombok.experimental.SuperBuilder;
 public class StoryMention extends BaseCreatedEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "story_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "story_id", nullable = false)
     private Story story;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "mentioned_user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "mentioned_user_id", nullable = false)
     private User mentionedUser;
 
     @Column(name = "x_percent")

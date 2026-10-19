@@ -47,7 +47,7 @@ public class Conversation extends BaseAuditableEntity {
     private String avatarUrl;
 
     @jakarta.persistence.ManyToOne(fetch = jakarta.persistence.FetchType.LAZY)
-    @jakarta.persistence.JoinColumn(name = "creator_id", columnDefinition = "BINARY(16)")
+    @jakarta.persistence.JoinColumn(name = "creator_id")
     private com.instagramclone.user.entity.User creator;
 
     @OneToMany(mappedBy = "conversation", cascade = CascadeType.ALL, orphanRemoval = true)

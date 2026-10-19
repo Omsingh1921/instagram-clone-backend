@@ -23,10 +23,10 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class Follow extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "follower_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "follower_id", nullable = false)
     private User follower;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "following_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "following_id", nullable = false)
     private User following;
 }

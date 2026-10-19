@@ -25,7 +25,7 @@ public class EmailDeliveryLog extends BaseCreatedEntity {
     private String recipientEmail;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id")
     @org.hibernate.annotations.OnDelete(action = org.hibernate.annotations.OnDeleteAction.SET_NULL)
     private User user;
 

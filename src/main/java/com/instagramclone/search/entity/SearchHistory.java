@@ -37,14 +37,14 @@ import java.time.LocalDateTime;
 public class SearchHistory extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "query", length = 255)
     private String query;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "target_user_id", columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "target_user_id")
     private User targetUser;
 
     @Enumerated(EnumType.STRING)

@@ -34,7 +34,7 @@ import java.util.UUID;
 @SuperBuilder
 public class Story extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "media_url", nullable = false, length = 700)

@@ -29,7 +29,7 @@ import java.util.List;
 public class StoryPoll extends BaseCreatedEntity {
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "story_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "story_id", nullable = false)
     private Story story;
 
     @Column(name = "question", nullable = false, length = 200)

@@ -31,11 +31,11 @@ import java.util.UUID;
 @SuperBuilder
 public class PostMediaTag extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_media_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "post_media_id", nullable = false)
     private PostMedia postMedia;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tagged_user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "tagged_user_id", nullable = false)
     private User taggedUser;
 
     @Column(name = "x_percent")

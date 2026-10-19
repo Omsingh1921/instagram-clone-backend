@@ -17,10 +17,10 @@ spring:
     validate-on-migrate: true
 
   datasource:
-    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:instagram_clone_db}?useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=false}}
-    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME}}
-    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD}}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:postgresql://${DB_HOST:aws-0-ap-southeast-2.pooler.supabase.com}:${DB_PORT:5432}/${DB_NAME:postgres}?sslmode=require}}
+    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME:postgres.oacpfgjljxyttqdqafrf}}
+    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD:Omsingh@1233}}
+    driver-class-name: ${DB_DRIVER:org.postgresql.Driver}
     hikari:
       pool-name: InstagramCloneHikariCP-Prod
       maximum-pool-size: 25

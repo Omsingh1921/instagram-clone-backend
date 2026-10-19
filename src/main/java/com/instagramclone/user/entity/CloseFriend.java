@@ -28,10 +28,10 @@ import lombok.experimental.SuperBuilder;
 public class CloseFriend extends BaseCreatedEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "friend_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "friend_id", nullable = false)
     private User friend;
 }

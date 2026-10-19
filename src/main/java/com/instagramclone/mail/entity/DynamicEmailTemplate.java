@@ -36,7 +36,7 @@ public class DynamicEmailTemplate extends BaseAuditableEntity {
     @Column(name = "subject_template", nullable = false, length = 255)
     private String subjectTemplate;
 
-    @Column(name = "body_html_template", nullable = false, columnDefinition = "MEDIUMTEXT")
+    @Column(name = "body_html_template", nullable = false, columnDefinition = "TEXT")
     private String bodyHtmlTemplate;
 
     @Column(name = "body_text_template", columnDefinition = "TEXT")

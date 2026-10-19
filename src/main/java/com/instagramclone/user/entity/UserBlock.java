@@ -36,10 +36,10 @@ import java.util.UUID;
 @SuperBuilder
 public class UserBlock extends BaseCreatedEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "blocker_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "blocker_id", nullable = false)
     private User blocker;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "blocked_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "blocked_id", nullable = false)
     private User blocked;
 }

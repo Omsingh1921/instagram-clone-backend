@@ -30,11 +30,11 @@ import lombok.experimental.SuperBuilder;
 public class StoryPollVote extends BaseCreatedEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "poll_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "poll_id", nullable = false)
     private StoryPoll poll;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "selected_option", nullable = false)

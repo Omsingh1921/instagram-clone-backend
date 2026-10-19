@@ -27,7 +27,7 @@ import lombok.experimental.SuperBuilder;
 public class UserSettings extends BaseAuditableEntity {
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, unique = true, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
     private User user;
 
     @Column(name = "is_private", nullable = false)

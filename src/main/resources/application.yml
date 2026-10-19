@@ -16,6 +16,7 @@ spring:
       ddl-auto: validate
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: false
         default_batch_fetch_size: 30
         jdbc:
@@ -25,10 +26,10 @@ spring:
 
   # Connection Pool & DataSource Configuration
   datasource:
-    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:instagram_clone_db}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true}}
-    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME:root}}
-    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD:Root@123}}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}?sslmode=require}}
+    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME:postgres}}
+    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD:}}
+    driver-class-name: ${DB_DRIVER:org.postgresql.Driver}
     hikari:
       pool-name: InstagramCloneHikariCP
       maximum-pool-size: 20

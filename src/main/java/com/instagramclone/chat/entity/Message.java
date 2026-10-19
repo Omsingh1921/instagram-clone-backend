@@ -36,11 +36,11 @@ import java.util.UUID;
 @SuperBuilder
 public class Message extends BaseAuditableEntity {
 @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "conversation_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "conversation_id", nullable = false)
     private Conversation conversation;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "sender_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "sender_id", nullable = false)
     private User sender;
 
     @Column(name = "content", columnDefinition = "TEXT")

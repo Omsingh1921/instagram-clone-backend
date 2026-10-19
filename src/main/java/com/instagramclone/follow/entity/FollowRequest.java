@@ -26,11 +26,11 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class FollowRequest extends BaseAuditableEntity {
 @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "requester_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "requester_id", nullable = false)
     private User requester;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "target_id", nullable = false, columnDefinition = "BINARY(16)")
+    @JoinColumn(name = "target_id", nullable = false)
     private User target;
 
     @Enumerated(EnumType.STRING)
