@@ -14,7 +14,7 @@ RUN mvn dependency:go-offline -B
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# --- Stage 2: Minimal Distroless / Alpine Runtime ---
+# --- Stage 2: Minimal Alpine Runtime ---
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
@@ -25,9 +25,9 @@ USER appuser
 # Copy built JAR from builder
 COPY --from=builder /app/target/*.jar app.jar
 
-# Render dynamic port binding (defaults to 8080)
-ENV PORT=8080
-EXPOSE 8080
+# Render default port is 10000
+ENV PORT=10000
+EXPOSE 10000
 
-# SerialGC and memory caps optimized for Render 512MB free tier
-ENTRYPOINT ["java", "-XX:+UseSerialGC", "-Xmx384m", "-Xms128m", "-XX:MaxMetaspaceSize=160m", "-jar", "app.jar"]
+# Shell execution ensures ${PORT:-10000} is dynamically expanded at runtime
+ENTRYPOINT ["sh", "-c", "java -XX:+UseSerialGC -Xmx384m -Xms128m -XX:MaxMetaspaceSize=160m -Dserver.port=${PORT:-10000} -jar app.jar"]
