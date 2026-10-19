@@ -3,10 +3,11 @@
 -- Enforces limit strictly at the database level using composite unique constraint and check constraint.
 
 -- 1. Drop existing 1:1 unique constraint on email
-ALTER TABLE users DROP INDEX email;
+ALTER TABLE users DROP CONSTRAINT IF EXISTS users_email_key;
+DROP INDEX IF EXISTS email;
 
 -- 2. Add account_slot column (values 1, 2, or 3)
-ALTER TABLE users ADD COLUMN account_slot TINYINT NOT NULL DEFAULT 1 AFTER email;
+ALTER TABLE users ADD COLUMN account_slot SMALLINT NOT NULL DEFAULT 1;
 
 -- 3. Ensure all existing legacy records are assigned to slot 1
 UPDATE users SET account_slot = 1 WHERE account_slot IS NULL OR account_slot = 0;

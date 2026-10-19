@@ -16,6 +16,7 @@ spring:
       ddl-auto: validate
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: false
         default_batch_fetch_size: 30
         jdbc:
@@ -25,10 +26,10 @@ spring:
 
   # Connection Pool & DataSource Configuration
   datasource:
-    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:instagram_clone_db}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true}}
-    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME:root}}
-    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD:Root@123}}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}?sslmode=require}}
+    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME:postgres}}
+    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD:}}
+    driver-class-name: ${DB_DRIVER:org.postgresql.Driver}
     hikari:
       pool-name: InstagramCloneHikariCP
       maximum-pool-size: 20
@@ -60,11 +61,13 @@ spring:
         shutdown-timeout: 2000ms
 
   # Mail Configuration (SMTP / Provider)
+  # IMPORTANT: MAIL_USERNAME and MAIL_PASSWORD have NO defaults — they must be set via environment variables.
+  # Never hardcode real credentials in this file.
   mail:
     host: ${MAIL_HOST:smtp.gmail.com}
     port: ${MAIL_PORT:587}
-    username: ${MAIL_USERNAME:lastsingh008@gmail.com}
-    password: ${MAIL_PASSWORD:ykoeoywboijuczfa}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -109,6 +112,11 @@ app:
   api:
     version: v1
     base-path: /api/v1
+
+  # Kafka integration toggle — false by default (uses Spring in-memory events instead).
+  # Set to true only when a real Kafka broker is available (e.g., production or staging).
+  kafka:
+    enabled: ${APP_KAFKA_ENABLED:false}
   rate-limit:
     enabled: true
     default-limit: 120
