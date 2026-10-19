@@ -1,0 +1,5 @@
+# Created at 2026-10-13T09:14:26.369
+Boot Manifest-JAR contains absolute paths in classpath 'A:\Instragram-clone\backend\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

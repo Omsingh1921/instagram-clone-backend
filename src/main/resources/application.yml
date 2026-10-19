@@ -1,0 +1,261 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: instagram-clone-backend
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+  # JPA & Hibernate Baseline
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: false
+        default_batch_fetch_size: 30
+        jdbc:
+          batch_size: 25
+          order_inserts: true
+          order_updates: true
+
+  # Connection Pool & DataSource Configuration
+  datasource:
+    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:instagram_clone_db}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true}}
+    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME:root}}
+    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD:Root@123}}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: InstagramCloneHikariCP
+      maximum-pool-size: 20
+      minimum-idle: 10
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+
+  # Flyway Migration Tooling
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: "0"
+    locations: classpath:db/migration
+
+  # Redis Configuration for Distributed Caching & Rate Limiting
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: ${REDIS_POOL_MAX_ACTIVE:30}
+          max-idle: ${REDIS_POOL_MAX_IDLE:15}
+          min-idle: ${REDIS_POOL_MIN_IDLE:5}
+          max-wait: ${REDIS_POOL_MAX_WAIT:2000ms}
+        shutdown-timeout: 2000ms
+
+  # Mail Configuration (SMTP / Provider)
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:lastsingh008@gmail.com}
+    password: ${MAIL_PASSWORD:ykoeoywboijuczfa}
+    properties:
+      mail:
+        smtp:
+          auth: ${MAIL_SMTP_AUTH:true}
+          starttls:
+            enable: ${MAIL_SMTP_STARTTLS:true}
+            required: true
+          connectiontimeout: ${MAIL_TIMEOUT_MS:10000}
+          timeout: ${MAIL_TIMEOUT_MS:10000}
+          writetimeout: ${MAIL_TIMEOUT_MS:10000}
+        smtps:
+          auth: ${MAIL_SMTP_AUTH:true}
+          connectiontimeout: ${MAIL_TIMEOUT_MS:10000}
+          timeout: ${MAIL_TIMEOUT_MS:10000}
+          writetimeout: ${MAIL_TIMEOUT_MS:10000}
+
+  # Apache Kafka Configuration (Supports Multi-Node Broker Clusters)
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all
+      properties:
+        spring.json.add.type.headers: true
+        retries: 3
+        enable.idempotence: true
+        delivery.timeout.ms: ${KAFKA_DELIVERY_TIMEOUT_MS:10000}
+        request.timeout.ms: ${KAFKA_REQUEST_TIMEOUT_MS:5000}
+    consumer:
+      group-id: ${KAFKA_CONSUMER_GROUP:instagram-clone-group}
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.instagramclone.*"
+    listener:
+      concurrency: ${KAFKA_LISTENER_CONCURRENCY:3}
+
+# Application Specific Security & Contract Config
+app:
+  api:
+    version: v1
+    base-path: /api/v1
+  rate-limit:
+    enabled: true
+    default-limit: 120
+    default-window-seconds: 60
+    trusted-proxies: ${RATE_LIMIT_TRUSTED_PROXIES:127.0.0.1,::1,0:0:0:0:0:0:0:1}
+    categories:
+      auth-login:
+        limit: 10
+        window-seconds: 60
+      auth-login-account:
+        limit: ${RATE_LIMIT_LOGIN_ACCOUNT:10}
+        window-seconds: 60
+      auth-register:
+        limit: 5
+        window-seconds: 60
+      # Email-targeted registration rate limit (Scope C anti-enumeration, defaults to 5 attempts per 60s per normalized email)
+      auth-register-email:
+        limit: ${RATE_LIMIT_REGISTER_EMAIL:5}
+        window-seconds: ${RATE_LIMIT_REGISTER_EMAIL_WINDOW:60}
+      auth-signup-request-otp:
+        limit: 5
+        window-seconds: 60
+      auth-signup-request-otp-email:
+        limit: ${RATE_LIMIT_SIGNUP_REQUEST_EMAIL:5}
+        window-seconds: 60
+      auth-signup-verify-otp:
+        limit: 10
+        window-seconds: 60
+      auth-signup-verify-otp-email:
+        limit: ${RATE_LIMIT_SIGNUP_VERIFY_EMAIL:5}
+        window-seconds: 60
+      auth-refresh:
+        limit: 20
+        window-seconds: 60
+      auth-password:
+        limit: 5
+        window-seconds: 60
+      auth-verify-email:
+        limit: 10
+        window-seconds: 60
+      auth-resend-verification:
+        limit: 3
+        window-seconds: 60
+      auth-verify-otp:
+        limit: 10
+        window-seconds: 60
+      auth-verify-otp-email:
+        limit: ${RATE_LIMIT_VERIFY_OTP_EMAIL:5}
+        window-seconds: 60
+      auth-resend-otp:
+        limit: 3
+        window-seconds: 60
+      auth-resend-otp-email:
+        limit: ${RATE_LIMIT_RESEND_OTP_EMAIL:3}
+        window-seconds: 60
+      auth-forgot-password:
+        limit: 3
+        window-seconds: 60
+      auth-reset-password:
+        limit: 5
+        window-seconds: 60
+      content-create:
+        limit: 15
+        window-seconds: 60
+      content-engagement:
+        limit: 60
+        window-seconds: 60
+      content-comment:
+        limit: 20
+        window-seconds: 60
+      search:
+        limit: 40
+        window-seconds: 60
+      messaging:
+        limit: 60
+        window-seconds: 60
+      media-upload:
+        limit: 15
+        window-seconds: 60
+
+  mail:
+    enabled: ${APP_MAIL_ENABLED:true}
+    from: ${MAIL_FROM:lastsingh008@gmail.com}
+    from-name: ${MAIL_FROM_NAME:Instagram}
+    verification-url: ${MAIL_VERIFY_URL:http://localhost:5173/verify-email}
+    reset-url: ${MAIL_RESET_URL:http://localhost:5173/reset-password}
+    verification-token-validity-minutes: ${MAIL_VERIFY_VALIDITY_MINS:1440}
+    reset-token-validity-minutes: ${MAIL_RESET_VALIDITY_MINS:30}
+
+  auth:
+    otp:
+      secret: ${OTP_HMAC_SECRET:instagram-clone-email-otp-hmac-sha256-secret-key-32bytes-default}
+      validity-minutes: ${OTP_VALIDITY_MINUTES:5}
+      max-attempts: ${OTP_MAX_ATTEMPTS:5}
+      resend-cooldown-seconds: ${OTP_RESEND_COOLDOWN_SECONDS:60}
+      max-hourly-resends: ${OTP_MAX_HOURLY_RESENDS:5}
+
+  upload:
+    dir: ${APP_UPLOAD_DIR:uploads}
+
+  cloudinary:
+    cloud-name: ${CLOUDINARY_CLOUD_NAME:}
+    api-key: ${CLOUDINARY_API_KEY:}
+    api-secret: ${CLOUDINARY_API_SECRET:}
+    fallback-on-failure: ${CLOUDINARY_FALLBACK_ON_FAILURE:true}
+    max-retries: ${CLOUDINARY_MAX_RETRIES:2}
+    retry-backoff-ms: ${CLOUDINARY_RETRY_BACKOFF_MS:500}
+
+  security:
+    jwt:
+      secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+      access-expiration-ms: ${JWT_ACCESS_EXPIRATION:900000}
+      refresh-expiration-ms: ${JWT_REFRESH_EXPIRATION:604800000}
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174,http://localhost:3000,http://127.0.0.1:3000}
+    lockout:
+      max-failed-attempts: ${LOCKOUT_MAX_ATTEMPTS:5}
+      lockout-duration-minutes: ${LOCKOUT_DURATION_MINUTES:15}
+
+  admin:
+    seed: ${APP_ADMIN_SEED:true}
+    username: ${APP_ADMIN_USERNAME:admin}
+    email: ${APP_ADMIN_EMAIL:admin@instagram.com}
+    password: ${APP_ADMIN_PASSWORD:Admin@12345}
+    display-name: ${APP_ADMIN_DISPLAY_NAME:System Administrator}
+
+# Actuator Health & Observability
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+
+# OpenAPI Documentation
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui/index.html
+    operationsSorter: method
+
+# Structured Logging with MDC Correlation ID
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p [%X{correlationId}] %logger{36} : %m%n"

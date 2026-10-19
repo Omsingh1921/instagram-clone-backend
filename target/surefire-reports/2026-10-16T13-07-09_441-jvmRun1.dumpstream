@@ -1,0 +1,81 @@
+# Created at 2026-10-16T13:07:34.655
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[24.918s][warning][codecache] CodeCache is full. Compiler has been disabled.'.
+
+# Created at 2026-10-16T13:07:34.658
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[24.918s][warning][codecache] Try increasing the code cache size using -XX:ReservedCodeCacheSize='.
+
+# Created at 2026-10-16T13:07:34.659
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'CodeCache: size=32768Kb used=19711Kb max_used=19711Kb free=13056Kb'.
+
+# Created at 2026-10-16T13:07:34.660
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream ' bounds [0x000002491b2f0000, 0x000002491c630000, 0x000002491d2f0000]'.
+
+# Created at 2026-10-16T13:07:34.661
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream ' total_blobs=11629, nmethods=10820, adapters=732, full_count=1'.
+
+# Created at 2026-10-16T13:07:35.908
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Compilation: disabled (not enough contiguous free space left), stopped_count=1, restarted_count=0'.
+
+# Created at 2026-10-16T13:07:40.445
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[30.709s][warning][os,thread] Failed to start thread "Unknown thread" - _beginthreadex failed (EINVAL) for attributes: stacksize: 256k, flags: CREATE_SUSPENDED STACK_SIZE_PARAM_IS_A_.'.
+
+# Created at 2026-10-16T13:07:40.494
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[30.709s][warning][os,thread] Failed to start the native thread for java.lang.Thread "lettuce-nioEventLoop-7-3"'.
+
+# Created at 2026-10-16T13:07:58.062
+ForkStarter IOException: java.lang.OutOfMemoryError.
+org.apache.maven.plugin.surefire.booterclient.output.MultipleFailureException: java.lang.OutOfMemoryError
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.<init>(ThreadedStreamConsumer.java:59)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer.<init>(ThreadedStreamConsumer.java:107)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:546)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:285)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:250)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1241)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1090)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:910)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:362)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+	Suppressed: java.lang.OutOfMemoryError
+		at java.base/java.io.RandomAccessFile.readBytes0(Native Method)
+		at java.base/java.io.RandomAccessFile.readBytes(RandomAccessFile.java:400)
+		at java.base/java.io.RandomAccessFile.read(RandomAccessFile.java:457)
+		at org.apache.maven.plugin.surefire.report.Utf8RecodingDeferredFileOutputStream.writeTo(Utf8RecodingDeferredFileOutputStream.java:148)
+		at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.addOutputStreamElement(StatelessXmlReporter.java:499)
+		at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.createOutErrElements(StatelessXmlReporter.java:483)
+		at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.serializeTestClassWithoutRerun(StatelessXmlReporter.java:230)
+		at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.serializeTestClass(StatelessXmlReporter.java:211)
+		at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.testSetCompleted(StatelessXmlReporter.java:161)
+		at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.testSetCompleted(StatelessXmlReporter.java:85)
+		at org.apache.maven.plugin.surefire.report.TestSetRunListener.testSetCompleted(TestSetRunListener.java:193)
+		at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$TestSetCompletedListener.handle(ForkClient.java:143)
+		at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$TestSetCompletedListener.handle(ForkClient.java:127)
+		at org.apache.maven.plugin.surefire.booterclient.output.ForkedProcessEventNotifier.notifyEvent(ForkedProcessEventNotifier.java:197)
+		at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.handleEvent(ForkClient.java:303)
+		at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.handleEvent(ForkClient.java:59)
+		at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:86)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+
+

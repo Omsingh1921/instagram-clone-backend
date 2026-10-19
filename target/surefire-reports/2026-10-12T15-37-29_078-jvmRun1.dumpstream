@@ -1,0 +1,27 @@
+# Created at 2026-10-12T15:37:43.404
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[13.787s][warning][codecache] CodeCache is full. Compiler has been disabled.'.
+
+# Created at 2026-10-12T15:37:43.407
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[13.787s][warning][codecache] Try increasing the code cache size using -XX:ReservedCodeCacheSize='.
+
+# Created at 2026-10-12T15:37:43.408
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'CodeCache: size=49152Kb used=12479Kb max_used=12479Kb free=36672Kb'.
+
+# Created at 2026-10-12T15:37:43.410
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream ' bounds [0x0000016a2d2f0000, 0x0000016a2df20000, 0x0000016a302f0000]'.
+
+# Created at 2026-10-12T15:37:43.411
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream ' total_blobs=7478, nmethods=6822, adapters=578, full_count=1'.
+
+# Created at 2026-10-12T15:37:43.596
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: EXIT
+java.io.EOFException
+	at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.read(AbstractStreamDecoder.java:444)
+	at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.read(AbstractStreamDecoder.java:419)
+	at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.readMessageType(AbstractStreamDecoder.java:116)
+	at org.apache.maven.surefire.booter.stream.CommandDecoder.decode(CommandDecoder.java:77)
+	at org.apache.maven.surefire.booter.spi.CommandChannelDecoder.decode(CommandChannelDecoder.java:60)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:290)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+

@@ -1,0 +1,18 @@
+# Created at 2026-10-16T17:28:57.250
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2026-10-16T17:28:57.252
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# There is insufficient memory for the Java Runtime Environment to continue.'.
+
+# Created at 2026-10-16T17:28:57.253
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Native memory allocation (mmap) failed to map 65536 bytes. Error detail: Failed to commit metaspace.'.
+
+# Created at 2026-10-16T17:28:57.253
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# An error report file with more information is saved as:'.
+
+# Created at 2026-10-16T17:28:57.298
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# A:\Instragram-clone\backend\hs_err_pid14504.log'.
+
+# Created at 2026-10-16T17:28:57.388
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[13.898s][warning][os] Loading hsdis library failed'.
+

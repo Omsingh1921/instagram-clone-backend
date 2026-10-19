@@ -1,0 +1,46 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: false
+        default_batch_fetch_size: 30
+
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+
+  datasource:
+    url: ${DB_URL:${SPRING_DATASOURCE_URL:jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:instagram_clone_db}?useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=false}}
+    username: ${DB_USERNAME:${SPRING_DATASOURCE_USERNAME}}
+    password: ${DB_PASSWORD:${SPRING_DATASOURCE_PASSWORD}}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: InstagramCloneHikariCP-Prod
+      maximum-pool-size: 25
+      minimum-idle: 10
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+
+logging:
+  level:
+    root: WARN
+    com.instagramclone: INFO
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.hibernate: WARN
+
+app:
+  rate-limit:
+    trusted-proxies: ${RATE_LIMIT_TRUSTED_PROXIES:}
+  security:
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS:}
+

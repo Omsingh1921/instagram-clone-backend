@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.instagramclone.admin.AdminIntegrationTest" time="49.087" tests="18" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="A:\Instragram-clone\backend\target\test-classes;A:\Instragram-clone\backend\target\classes;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.4\spring-boot-starter-web-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.4\spring-boot-starter-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot\3.3.4\spring-boot-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.4\spring-boot-autoconfigure-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.4\spring-boot-starter-logging-3.3.4.jar;C:\Users\omsin\.m2\repository\ch\qos\logback\logback-classic\1.5.8\logback-classic-1.5.8.jar;C:\Users\omsin\.m2\repository\ch\qos\logback\logback-core\1.5.8\logback-core-1.5.8.jar;C:\Users\omsin\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\omsin\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\omsin\.m2\repository\org\slf4j\jul-to-slf4j\2.0.16\jul-to-slf4j-2.0.16.jar;C:\Users\omsin\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\omsin\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.4\spring-boot-starter-json-3.3.4.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.4\spring-boot-starter-tomcat-3.3.4.jar;C:\Users\omsin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.30\tomcat-embed-core-10.1.30.jar;C:\Users\omsin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.30\tomcat-embed-websocket-10.1.30.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-web\6.1.13\spring-web-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-beans\6.1.13\spring-beans-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-webmvc\6.1.13\spring-webmvc-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-expression\6.1.13\spring-expression-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.4\spring-boot-starter-validation-3.3.4.jar;C:\Users\omsin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.30\tomcat-embed-el-10.1.30.jar;C:\Users\omsin\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\omsin\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\omsin\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\omsin\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.3.4\spring-boot-starter-security-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-aop\6.1.13\spring-aop-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-config\6.3.3\spring-security-config-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-web\6.3.3\spring-security-web-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.4\spring-boot-starter-data-jpa-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.4\spring-boot-starter-aop-3.3.4.jar;C:\Users\omsin\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.4\spring-boot-starter-jdbc-3.3.4.jar;C:\Users\omsin\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-jdbc\6.1.13\spring-jdbc-6.1.13.jar;C:\Users\omsin\.m2\repository\org\hibernate\orm\hibernate-core\6.5.3.Final\hibernate-core-6.5.3.Final.jar;C:\Users\omsin\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\omsin\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\omsin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\omsin\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\omsin\.m2\repository\net\bytebuddy\byte-buddy\1.14.19\byte-buddy-1.14.19.jar;C:\Users\omsin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\omsin\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\omsin\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\omsin\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\omsin\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\omsin\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-jpa\3.3.4\spring-data-jpa-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-commons\3.3.4\spring-data-commons-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-orm\6.1.13\spring-orm-6.1.13.jar;C:\Users\omsin\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-aspects\6.1.13\spring-aspects-6.1.13.jar;C:\Users\omsin\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\omsin\.m2\repository\org\flywaydb\flyway-core\10.10.0\flyway-core-10.10.0.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-toml\2.17.2\jackson-dataformat-toml-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\omsin\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\omsin\.m2\repository\org\flywaydb\flyway-mysql\10.10.0\flyway-mysql-10.10.0.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\3.3.4\spring-boot-starter-data-redis-3.3.4.jar;C:\Users\omsin\.m2\repository\io\lettuce\lettuce-core\6.3.2.RELEASE\lettuce-core-6.3.2.RELEASE.jar;C:\Users\omsin\.m2\repository\io\netty\netty-common\4.1.113.Final\netty-common-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-handler\4.1.113.Final\netty-handler-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-resolver\4.1.113.Final\netty-resolver-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-buffer\4.1.113.Final\netty-buffer-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.113.Final\netty-transport-native-unix-common-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-codec\4.1.113.Final\netty-codec-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-transport\4.1.113.Final\netty-transport-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\projectreactor\reactor-core\3.6.10\reactor-core-3.6.10.jar;C:\Users\omsin\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-redis\3.3.4\spring-data-redis-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-keyvalue\3.3.4\spring-data-keyvalue-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-oxm\6.1.13\spring-oxm-6.1.13.jar;C:\Users\omsin\.m2\repository\org\apache\commons\commons-pool2\2.12.0\commons-pool2-2.12.0.jar;C:\Users\omsin\.m2\repository\org\springframework\kafka\spring-kafka\3.2.4\spring-kafka-3.2.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-context\6.1.13\spring-context-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-messaging\6.1.13\spring-messaging-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-tx\6.1.13\spring-tx-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\retry\spring-retry\2.0.9\spring-retry-2.0.9.jar;C:\Users\omsin\.m2\repository\org\apache\kafka\kafka-clients\3.7.1\kafka-clients-3.7.1.jar;C:\Users\omsin\.m2\repository\com\github\luben\zstd-jni\1.5.6-3\zstd-jni-1.5.6-3.jar;C:\Users\omsin\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\omsin\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-observation\1.13.4\micrometer-observation-1.13.4.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-commons\1.13.4\micrometer-commons-1.13.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-websocket\3.3.4\spring-boot-starter-websocket-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-websocket\6.1.13\spring-websocket-6.1.13.jar;C:\Users\omsin\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.6\jjwt-api-0.12.6.jar;C:\Users\omsin\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.6\jjwt-impl-0.12.6.jar;C:\Users\omsin\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.6\jjwt-jackson-0.12.6.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\omsin\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.6.0\springdoc-openapi-starter-webmvc-ui-2.6.0.jar;C:\Users\omsin\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.6.0\springdoc-openapi-starter-webmvc-api-2.6.0.jar;C:\Users\omsin\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.6.0\springdoc-openapi-starter-common-2.6.0.jar;C:\Users\omsin\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.22\swagger-core-jakarta-2.2.22.jar;C:\Users\omsin\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.22\swagger-annotations-jakarta-2.2.22.jar;C:\Users\omsin\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.22\swagger-models-jakarta-2.2.22.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.17.2\jackson-dataformat-yaml-2.17.2.jar;C:\Users\omsin\.m2\repository\org\webjars\swagger-ui\5.17.14\swagger-ui-5.17.14.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.3.4\spring-boot-starter-actuator-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.3.4\spring-boot-actuator-autoconfigure-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-actuator\3.3.4\spring-boot-actuator-3.3.4.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-jakarta9\1.13.4\micrometer-jakarta9-1.13.4.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-core\1.13.4\micrometer-core-1.13.4.jar;C:\Users\omsin\.m2\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;C:\Users\omsin\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-mail\3.3.4\spring-boot-starter-mail-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-context-support\6.1.13\spring-context-support-6.1.13.jar;C:\Users\omsin\.m2\repository\org\eclipse\angus\jakarta.mail\2.0.3\jakarta.mail-2.0.3.jar;C:\Users\omsin\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\omsin\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\omsin\.m2\repository\com\cloudinary\cloudinary-http44\1.39.0\cloudinary-http44-1.39.0.jar;C:\Users\omsin\.m2\repository\com\cloudinary\cloudinary-core\1.39.0\cloudinary-core-1.39.0.jar;C:\Users\omsin\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\omsin\.m2\repository\org\apache\httpcomponents\httpclient\4.4\httpclient-4.4.jar;C:\Users\omsin\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\omsin\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\omsin\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\omsin\.m2\repository\org\apache\httpcomponents\httpmime\4.4\httpmime-4.4.jar;C:\Users\omsin\.m2\repository\org\projectlombok\lombok\1.18.34\lombok-1.18.34.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.4\spring-boot-starter-test-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-test\3.3.4\spring-boot-test-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.4\spring-boot-test-autoconfigure-3.3.4.jar;C:\Users\omsin\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\omsin\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\omsin\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\omsin\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\omsin\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\omsin\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\omsin\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\omsin\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.3\junit-jupiter-5.10.3.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\omsin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\omsin\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\omsin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\omsin\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\omsin\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\omsin\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar;C:\Users\omsin\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\omsin\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\omsin\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\omsin\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-core\6.1.13\spring-core-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-jcl\6.1.13\spring-jcl-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-test\6.1.13\spring-test-6.1.13.jar;C:\Users\omsin\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-test\6.3.3\spring-security-test-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-core\6.3.3\spring-security-core-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-crypto\6.3.3\spring-security-crypto-6.3.3.jar;C:\Users\omsin\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\omsin\AppData\Local\Temp\surefire4417724516041995726\surefirebooter-20261017091240682_3.jar C:\Users\omsin\AppData\Local\Temp\surefire4417724516041995726 2026-10-17T09-12-40_421-jvmRun1 surefire-20261017091240682_1tmp surefire_0-20261017091240682_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="AdminIntegrationTest"/>
+    <property name="surefire.test.class.path" value="A:\Instragram-clone\backend\target\test-classes;A:\Instragram-clone\backend\target\classes;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.4\spring-boot-starter-web-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.4\spring-boot-starter-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot\3.3.4\spring-boot-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.4\spring-boot-autoconfigure-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.4\spring-boot-starter-logging-3.3.4.jar;C:\Users\omsin\.m2\repository\ch\qos\logback\logback-classic\1.5.8\logback-classic-1.5.8.jar;C:\Users\omsin\.m2\repository\ch\qos\logback\logback-core\1.5.8\logback-core-1.5.8.jar;C:\Users\omsin\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\omsin\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\omsin\.m2\repository\org\slf4j\jul-to-slf4j\2.0.16\jul-to-slf4j-2.0.16.jar;C:\Users\omsin\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\omsin\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.4\spring-boot-starter-json-3.3.4.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.4\spring-boot-starter-tomcat-3.3.4.jar;C:\Users\omsin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.30\tomcat-embed-core-10.1.30.jar;C:\Users\omsin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.30\tomcat-embed-websocket-10.1.30.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-web\6.1.13\spring-web-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-beans\6.1.13\spring-beans-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-webmvc\6.1.13\spring-webmvc-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-expression\6.1.13\spring-expression-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.4\spring-boot-starter-validation-3.3.4.jar;C:\Users\omsin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.30\tomcat-embed-el-10.1.30.jar;C:\Users\omsin\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\omsin\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\omsin\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\omsin\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.3.4\spring-boot-starter-security-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-aop\6.1.13\spring-aop-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-config\6.3.3\spring-security-config-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-web\6.3.3\spring-security-web-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.4\spring-boot-starter-data-jpa-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.4\spring-boot-starter-aop-3.3.4.jar;C:\Users\omsin\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.4\spring-boot-starter-jdbc-3.3.4.jar;C:\Users\omsin\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-jdbc\6.1.13\spring-jdbc-6.1.13.jar;C:\Users\omsin\.m2\repository\org\hibernate\orm\hibernate-core\6.5.3.Final\hibernate-core-6.5.3.Final.jar;C:\Users\omsin\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\omsin\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\omsin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\omsin\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\omsin\.m2\repository\net\bytebuddy\byte-buddy\1.14.19\byte-buddy-1.14.19.jar;C:\Users\omsin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\omsin\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\omsin\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\omsin\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\omsin\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\omsin\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-jpa\3.3.4\spring-data-jpa-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-commons\3.3.4\spring-data-commons-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-orm\6.1.13\spring-orm-6.1.13.jar;C:\Users\omsin\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-aspects\6.1.13\spring-aspects-6.1.13.jar;C:\Users\omsin\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\omsin\.m2\repository\org\flywaydb\flyway-core\10.10.0\flyway-core-10.10.0.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-toml\2.17.2\jackson-dataformat-toml-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\omsin\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\omsin\.m2\repository\org\flywaydb\flyway-mysql\10.10.0\flyway-mysql-10.10.0.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\3.3.4\spring-boot-starter-data-redis-3.3.4.jar;C:\Users\omsin\.m2\repository\io\lettuce\lettuce-core\6.3.2.RELEASE\lettuce-core-6.3.2.RELEASE.jar;C:\Users\omsin\.m2\repository\io\netty\netty-common\4.1.113.Final\netty-common-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-handler\4.1.113.Final\netty-handler-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-resolver\4.1.113.Final\netty-resolver-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-buffer\4.1.113.Final\netty-buffer-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.113.Final\netty-transport-native-unix-common-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-codec\4.1.113.Final\netty-codec-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\netty\netty-transport\4.1.113.Final\netty-transport-4.1.113.Final.jar;C:\Users\omsin\.m2\repository\io\projectreactor\reactor-core\3.6.10\reactor-core-3.6.10.jar;C:\Users\omsin\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-redis\3.3.4\spring-data-redis-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\data\spring-data-keyvalue\3.3.4\spring-data-keyvalue-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-oxm\6.1.13\spring-oxm-6.1.13.jar;C:\Users\omsin\.m2\repository\org\apache\commons\commons-pool2\2.12.0\commons-pool2-2.12.0.jar;C:\Users\omsin\.m2\repository\org\springframework\kafka\spring-kafka\3.2.4\spring-kafka-3.2.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-context\6.1.13\spring-context-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-messaging\6.1.13\spring-messaging-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-tx\6.1.13\spring-tx-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\retry\spring-retry\2.0.9\spring-retry-2.0.9.jar;C:\Users\omsin\.m2\repository\org\apache\kafka\kafka-clients\3.7.1\kafka-clients-3.7.1.jar;C:\Users\omsin\.m2\repository\com\github\luben\zstd-jni\1.5.6-3\zstd-jni-1.5.6-3.jar;C:\Users\omsin\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\omsin\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-observation\1.13.4\micrometer-observation-1.13.4.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-commons\1.13.4\micrometer-commons-1.13.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-websocket\3.3.4\spring-boot-starter-websocket-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-websocket\6.1.13\spring-websocket-6.1.13.jar;C:\Users\omsin\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.6\jjwt-api-0.12.6.jar;C:\Users\omsin\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.6\jjwt-impl-0.12.6.jar;C:\Users\omsin\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.6\jjwt-jackson-0.12.6.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\omsin\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.6.0\springdoc-openapi-starter-webmvc-ui-2.6.0.jar;C:\Users\omsin\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.6.0\springdoc-openapi-starter-webmvc-api-2.6.0.jar;C:\Users\omsin\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.6.0\springdoc-openapi-starter-common-2.6.0.jar;C:\Users\omsin\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.22\swagger-core-jakarta-2.2.22.jar;C:\Users\omsin\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.22\swagger-annotations-jakarta-2.2.22.jar;C:\Users\omsin\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.22\swagger-models-jakarta-2.2.22.jar;C:\Users\omsin\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.17.2\jackson-dataformat-yaml-2.17.2.jar;C:\Users\omsin\.m2\repository\org\webjars\swagger-ui\5.17.14\swagger-ui-5.17.14.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.3.4\spring-boot-starter-actuator-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.3.4\spring-boot-actuator-autoconfigure-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-actuator\3.3.4\spring-boot-actuator-3.3.4.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-jakarta9\1.13.4\micrometer-jakarta9-1.13.4.jar;C:\Users\omsin\.m2\repository\io\micrometer\micrometer-core\1.13.4\micrometer-core-1.13.4.jar;C:\Users\omsin\.m2\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;C:\Users\omsin\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-mail\3.3.4\spring-boot-starter-mail-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-context-support\6.1.13\spring-context-support-6.1.13.jar;C:\Users\omsin\.m2\repository\org\eclipse\angus\jakarta.mail\2.0.3\jakarta.mail-2.0.3.jar;C:\Users\omsin\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\omsin\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\omsin\.m2\repository\com\cloudinary\cloudinary-http44\1.39.0\cloudinary-http44-1.39.0.jar;C:\Users\omsin\.m2\repository\com\cloudinary\cloudinary-core\1.39.0\cloudinary-core-1.39.0.jar;C:\Users\omsin\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\omsin\.m2\repository\org\apache\httpcomponents\httpclient\4.4\httpclient-4.4.jar;C:\Users\omsin\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\omsin\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\omsin\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\omsin\.m2\repository\org\apache\httpcomponents\httpmime\4.4\httpmime-4.4.jar;C:\Users\omsin\.m2\repository\org\projectlombok\lombok\1.18.34\lombok-1.18.34.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.4\spring-boot-starter-test-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-test\3.3.4\spring-boot-test-3.3.4.jar;C:\Users\omsin\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.4\spring-boot-test-autoconfigure-3.3.4.jar;C:\Users\omsin\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\omsin\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\omsin\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\omsin\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\omsin\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\omsin\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\omsin\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\omsin\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.3\junit-jupiter-5.10.3.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\omsin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\omsin\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\omsin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\omsin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\omsin\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\omsin\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\omsin\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar;C:\Users\omsin\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\omsin\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\omsin\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\omsin\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-core\6.1.13\spring-core-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-jcl\6.1.13\spring-jcl-6.1.13.jar;C:\Users\omsin\.m2\repository\org\springframework\spring-test\6.1.13\spring-test-6.1.13.jar;C:\Users\omsin\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-test\6.3.3\spring-security-test-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-core\6.3.3\spring-security-core-6.3.3.jar;C:\Users\omsin\.m2\repository\org\springframework\security\spring-security-crypto\6.3.3\spring-security-crypto-6.3.3.jar;C:\Users\omsin\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\omsin"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="A:\Instragram-clone\backend"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\omsin\AppData\Local\Temp\surefire4417724516041995726\surefirebooter-20261017091240682_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.11+10-LTS"/>
+    <property name="user.name" value="omsin"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.11+10"/>
+    <property name="localRepository" value="C:\Users\omsin\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\omsin\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.11"/>
+    <property name="user.dir" value="A:\Instragram-clone\backend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="14720"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/omsin/.gemini/antigravity-ide/bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\PostgreSQL\18\bin;C:\Program Files\Memurai\;C:\Program Files\apache-maven-3.9.16-bin\apache-maven-3.9.16\bin;C:\Users\omsin\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\omsin\AppData\Local\Programs\Python\Python312\;C:\Users\omsin\AppData\Local\Programs\Python\Launcher\;C:\Users\omsin\AppData\Local\Microsoft\WindowsApps;C:\Users\omsin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\omsin\AppData\Roaming\npm;C:\Users\omsin\AppData\Local\Programs\Antigravity IDE\bin;C:\Users\omsin\AppData\Local\Programs\DockerDesktop\resources\bin;C:\Users\omsin\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1.2-full_build\bin;C:\Users\omsin\AppData\Local\Microsoft\WinGet\Packages\DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\omsin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-N-125365-g9a01c1cb6a-win64-gpl\bin;C:\Users\omsin\AppData\Local\Microsoft\WinGet\Packages\yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe;."/>
+    <property name="java.vm.info" value="mixed mode, emulated-client, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.11+10-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSSXXX} %5p [%X{correlationId}] %logger{36} : %m%n"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[instagram-clone-backend] "/>
+  </properties>
+  <testcase name="adminResolveReport_RemoveContent_SoftDeletesPost" classname="com.instagramclone.admin.AdminIntegrationTest" time="3.888">
+    <system-out><![CDATA[Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+09:12:43.151 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.instagramclone.admin.AdminIntegrationTest]: AdminIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:12:43.447 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.instagramclone.InstagramCloneApplication for test class com.instagramclone.admin.AdminIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-17T09:12:44.661+05:30  INFO [] c.i.admin.AdminIntegrationTest : Starting AdminIntegrationTest using Java 21.0.11 with PID 14720 (started by omsin in A:\Instragram-clone\backend)
+2026-10-17T09:12:44.663+05:30  INFO [] c.i.admin.AdminIntegrationTest : The following 1 profile is active: "test"
+2026-10-17T09:12:52.265+05:30  INFO [] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-17T09:12:52.448+05:30  INFO [] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-10-17T09:12:52.583+05:30  INFO [] o.h.c.i.RegionFactoryInitiator : HHH000026: Second-level cache disabled
+2026-10-17T09:12:53.481+05:30  INFO [] com.zaxxer.hikari.HikariDataSource : InstagramCloneHikariCP - Starting...
+2026-10-17T09:12:53.918+05:30  INFO [] com.zaxxer.hikari.pool.HikariPool : InstagramCloneHikariCP - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-10-17T09:12:53.920+05:30  INFO [] com.zaxxer.hikari.HikariDataSource : InstagramCloneHikariCP - Start completed.
+2026-10-17T09:12:53.966+05:30  WARN [] org.hibernate.orm.deprecation : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-17T09:12:57.903+05:30  INFO [] o.h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-17T09:13:04.249+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:04.252+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:04.256+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:04.260+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:04.266+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:04.340+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:04.348+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:04.358+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:04.363+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:04.368+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:04.373+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:04.376+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:04.382+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:04.386+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:04.389+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:04.397+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:04.402+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:04.407+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:04.413+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:04.423+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:04.427+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:04.432+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:04.436+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:04.443+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:04.448+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:04.454+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:04.462+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:04.715+05:30  INFO [] c.instagramclone.config.CorsConfig : Configured development CORS with allowed origin patterns: [http://localhost:5173, http://127.0.0.1:5173, http://localhost:*, http://127.0.0.1:*, http://localhost:5174, http://127.0.0.1:5174, http://localhost:3000, http://127.0.0.1:3000]
+2026-10-17T09:13:05.396+05:30  WARN [] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-10-17T09:13:07.253+05:30  INFO [] c.i.config.CloudinaryConfig : Cloudinary credentials not active. Resilient local media storage fallback active.
+2026-10-17T09:13:23.471+05:30  INFO [] c.i.admin.AdminIntegrationTest : Started AdminIntegrationTest in 39.742 seconds (process running for 42.588)
+2026-10-17T09:13:23.648+05:30  INFO [] c.i.config.DataInitializer : Starting application default data initialization...
+2026-10-17T09:13:23.665+05:30  INFO [] c.i.config.DataInitializer : [DATA INITIALIZER] Dynamic email configurations verified/seeded.
+2026-10-17T09:13:23.713+05:30  INFO [] c.i.config.DataInitializer : [DATA INITIALIZER] Dynamic email templates verified/seeded.
+2026-10-17T09:13:23.713+05:30  INFO [] c.i.config.DataInitializer : [DATA INITIALIZER] Default admin seeding is disabled by configuration (app.admin.seed=false).
+2026-10-17T09:13:23.713+05:30  INFO [] c.i.config.DataInitializer : Application default data initialization completed.
+2026-10-17T09:13:25.102+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:25.105+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:25.108+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:25.112+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:25.118+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:25.148+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:25.152+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:25.156+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:25.160+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:25.165+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:25.169+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:25.172+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:25.176+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:25.180+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:25.185+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:25.188+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:25.192+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:25.518+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:25.528+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:25.533+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:25.541+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:25.548+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:25.554+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:25.561+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:25.575+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:25.581+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:25.586+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:27.393+05:30  INFO [04bdce50-31d8-40c1-9b61-fd33e6b7d9d0] c.i.a.service.impl.AdminServiceImpl : Post 091c3a0c-82b0-466d-9a18-17997ab37f5a soft-deleted by admin superadmin
+2026-10-17T09:13:27.395+05:30  INFO [04bdce50-31d8-40c1-9b61-fd33e6b7d9d0] c.i.a.service.impl.AdminServiceImpl : Report 6df81c73-5903-49cb-be96-195aaee03275 resolved with status RESOLVED and action REMOVE_CONTENT by reviewer superadmin
+2026-10-17T09:13:27.399+05:30  INFO [] c.i.a.s.impl.AuditLogServiceImpl : AUDIT_LOG: user=[b678e4a2-e365-4c93-9c6c-a5317ecf6583] action=[ADMIN_RESOLVE_REPORT] resource=[REPORT:6df81c73-5903-49cb-be96-195aaee03275] ip=[null]
+2026-10-17T09:13:27.400+05:30  INFO [] c.i.a.s.impl.AuditLogServiceImpl : AUDIT_LOG: user=[b678e4a2-e365-4c93-9c6c-a5317ecf6583] action=[ADMIN_TAKEDOWN_POST] resource=[POST:091c3a0c-82b0-466d-9a18-17997ab37f5a] ip=[null]
+]]></system-out>
+  </testcase>
+  <testcase name="adminResolveReport_SuspendUser_SuspendsAuthor" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.276">
+    <system-out><![CDATA[2026-10-17T09:13:27.697+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.700+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.704+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.709+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.713+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.729+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:27.731+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:27.735+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:27.738+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:27.743+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:27.746+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:27.750+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:27.752+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:27.755+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:27.758+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:27.762+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:27.764+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:27.768+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:27.771+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:27.774+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:27.777+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:27.781+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:27.784+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:27.786+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:27.789+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:27.794+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:27.797+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:27.946+05:30  INFO [4865b657-9f21-467d-9159-83632bbd6cca] c.i.a.service.impl.AdminServiceImpl : User alice (ID: e0b7959a-100c-4bb7-b806-d22eab15c950) suspended by admin superadmin
+2026-10-17T09:13:27.946+05:30  INFO [4865b657-9f21-467d-9159-83632bbd6cca] c.i.a.service.impl.AdminServiceImpl : Report 1fe236bd-9fb4-446e-8ed1-ee9c2dd4e4e6 resolved with status RESOLVED and action SUSPEND_USER by reviewer superadmin
+2026-10-17T09:13:27.948+05:30  INFO [] c.i.a.s.impl.AuditLogServiceImpl : AUDIT_LOG: user=[4fc49569-eb7a-475e-bb17-7e23d60aa7f3] action=[ADMIN_SUSPEND_USER] resource=[USER:e0b7959a-100c-4bb7-b806-d22eab15c950] ip=[null]
+2026-10-17T09:13:27.948+05:30  INFO [] c.i.a.s.impl.AuditLogServiceImpl : AUDIT_LOG: user=[4fc49569-eb7a-475e-bb17-7e23d60aa7f3] action=[ADMIN_RESOLVE_REPORT] resource=[REPORT:1fe236bd-9fb4-446e-8ed1-ee9c2dd4e4e6] ip=[null]
+]]></system-out>
+  </testcase>
+  <testcase name="adminEmailConfigs_UpdateConfig_DynamicallyUpdatesSender" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.27">
+    <system-out><![CDATA[2026-10-17T09:13:27.977+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.979+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.981+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.983+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.985+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:27.997+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:27.999+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:28.002+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:28.004+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:28.007+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:28.009+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:28.012+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:28.014+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:28.017+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:28.020+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:28.022+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:28.025+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:28.029+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:28.034+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:28.039+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:28.042+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:28.045+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:28.048+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:28.050+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:28.053+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:28.057+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:28.059+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:28.213+05:30  INFO [ca8976a2-189c-4f66-8bac-23890bf784d6] c.i.m.s.i.DynamicEmailConfigServiceImpl : Dynamic email configuration updated for category [SECURITY] -> from: [cyber-security@instagram.com], name: [Instagram Cyber Defense]
+]]></system-out>
+  </testcase>
+  <testcase name="nonAdmin_AccessingAdminEndpoints_Forbidden" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.25">
+    <system-out><![CDATA[2026-10-17T09:13:28.248+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.253+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.256+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.258+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.260+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.280+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:28.282+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:28.283+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:28.284+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:28.285+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:28.288+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:28.291+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:28.294+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:28.297+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:28.300+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:28.303+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:28.305+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:28.308+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:28.310+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:28.313+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:28.314+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:28.316+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:28.319+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:28.321+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:28.323+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:28.325+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:28.327+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:28.434+05:30  WARN [58bfc42c-b540-45ad-a08d-29b2edb26102] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/reports: Access Denied
+2026-10-17T09:13:28.447+05:30  WARN [36c8e694-e23f-40f1-993a-02d6572c6a75] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/dashboard/stats: Access Denied
+2026-10-17T09:13:28.462+05:30  WARN [aaac2598-5a1a-42ce-8fe8-d75073a1f7fe] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/users: Access Denied
+2026-10-17T09:13:28.482+05:30  WARN [f33bfd67-4719-4835-b18c-1eeed4248448] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/users/73d1c1cf-d199-463d-bd20-5608efed00ae/status: Access Denied
+]]></system-out>
+  </testcase>
+  <testcase name="createReport_Success" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.605">
+    <system-out><![CDATA[2026-10-17T09:13:28.504+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.507+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.509+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.511+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.515+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:28.877+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:28.885+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:28.888+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:28.892+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:28.897+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:28.899+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:28.904+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:28.906+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:28.910+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:28.912+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:28.914+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:28.916+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:28.918+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:28.920+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:28.922+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:28.925+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:28.929+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:28.932+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:28.934+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:28.938+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:28.941+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:28.944+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:29.073+05:30  INFO [a24435d1-82cb-46cb-a033-167bdc84021b] c.i.a.service.impl.AdminServiceImpl : Report 91d368a3-3381-4d68-8c78-4180a5159d2b created by user bob for target POST ID d275401a-d22c-4a71-82cb-b434c04d71f4
+]]></system-out>
+  </testcase>
+  <testcase name="createReport_SelfReporting_BadRequest" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.213">
+    <system-out><![CDATA[2026-10-17T09:13:29.110+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.113+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.116+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.118+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.120+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.135+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:29.140+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:29.143+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:29.145+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:29.147+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:29.149+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:29.152+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:29.154+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:29.156+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:29.158+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:29.160+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:29.162+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:29.164+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:29.165+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:29.167+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:29.169+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:29.171+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:29.174+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:29.177+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:29.179+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.181+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.183+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:29.285+05:30  WARN [675944fb-3580-4553-8be5-fc2b04762f50] c.i.c.e.GlobalExceptionHandler : Application exception [BAD_REQUEST]: You cannot report your own content at /api/v1/reports
+2026-10-17T09:13:29.305+05:30  WARN [a23e7288-fae3-4298-ab79-948487d6e91e] c.i.c.e.GlobalExceptionHandler : Application exception [BAD_REQUEST]: You cannot report your own content at /api/v1/reports
+]]></system-out>
+  </testcase>
+  <testcase name="adminReports_GetListAndDetail" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.247">
+    <system-out><![CDATA[2026-10-17T09:13:29.325+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.328+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.330+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.332+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.336+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.346+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:29.347+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:29.350+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:29.352+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:29.355+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:29.357+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:29.359+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:29.360+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:29.363+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:29.364+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:29.368+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:29.371+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:29.373+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:29.374+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:29.377+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:29.382+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:29.386+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:29.389+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:29.390+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:29.393+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.397+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.398+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+]]></system-out>
+  </testcase>
+  <testcase name="adminEmailTemplates_GetAllAndByType" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.155">
+    <system-out><![CDATA[2026-10-17T09:13:29.572+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.574+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.576+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.578+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.580+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.587+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:29.588+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:29.590+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:29.593+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:29.594+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:29.596+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:29.597+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:29.599+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:29.600+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:29.602+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:29.603+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:29.605+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:29.606+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:29.607+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:29.609+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:29.610+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:29.612+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:29.613+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:29.615+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:29.616+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.618+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.620+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+]]></system-out>
+  </testcase>
+  <testcase name="adminEmailTemplates_UpdateAndPreview" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.193">
+    <system-out><![CDATA[2026-10-17T09:13:29.738+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.740+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.741+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.743+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.744+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.750+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:29.752+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:29.753+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:29.755+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:29.757+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:29.758+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:29.759+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:29.761+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:29.761+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:29.764+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:29.765+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:29.766+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:29.768+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:29.770+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:29.771+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:29.773+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:29.774+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:29.776+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:29.777+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:29.779+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.780+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.782+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:29.842+05:30  INFO [8b66e902-44d0-4ba1-996c-016e6f5e732d] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Updated dynamic email template for [WELCOME] (Active: true)
+2026-10-17T09:13:29.894+05:30  INFO [2cfbb2ca-64bf-4c79-8057-738057e55f54] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Reset dynamic email template for [WELCOME] to system default
+]]></system-out>
+  </testcase>
+  <testcase name="adminEmailTemplates_NonAdmin_Forbidden" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.109">
+    <system-out><![CDATA[2026-10-17T09:13:29.923+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.925+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.925+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.926+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.928+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:29.932+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:29.933+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:29.934+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:29.935+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:29.936+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:29.937+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:29.938+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:29.940+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:29.942+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:29.943+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:29.944+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:29.945+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:29.947+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:29.948+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:29.949+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:29.951+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:29.953+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:29.955+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:29.956+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:29.957+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.958+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:29.960+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:30.010+05:30  WARN [d781870c-bdf5-4dec-9a23-e0db535983f6] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/email-templates: Access Denied
+2026-10-17T09:13:30.021+05:30  WARN [4200049a-e2ca-433a-9757-509e86a1d8b1] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/email-templates: Access Denied
+]]></system-out>
+  </testcase>
+  <testcase name="adminUsers_SearchAndFilter" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.23">
+    <system-out><![CDATA[2026-10-17T09:13:30.035+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.036+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.037+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.038+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.040+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.043+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:30.045+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:30.046+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:30.047+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:30.048+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:30.050+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:30.051+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:30.052+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:30.054+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:30.056+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:30.057+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:30.059+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:30.061+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:30.063+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:30.065+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:30.068+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:30.069+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:30.070+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:30.071+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:30.073+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.078+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.083+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+]]></system-out>
+  </testcase>
+  <testcase name="adminDashboardStats_Success" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.233">
+    <system-out><![CDATA[2026-10-17T09:13:30.267+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.269+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.270+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.271+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.272+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.275+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:30.276+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:30.280+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:30.283+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:30.287+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:30.289+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:30.292+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:30.295+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:30.297+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:30.301+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:30.306+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:30.309+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:30.311+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:30.313+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:30.321+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:30.324+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:30.328+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:30.329+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:30.331+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:30.333+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.336+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.339+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+]]></system-out>
+  </testcase>
+  <testcase name="adminEmailConfigs_GetAllAndByCategory" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.156">
+    <system-out><![CDATA[2026-10-17T09:13:30.512+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.515+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.516+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.517+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.519+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.525+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:30.528+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:30.530+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:30.532+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:30.534+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:30.536+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:30.537+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:30.539+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:30.540+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:30.541+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:30.544+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:30.545+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:30.547+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:30.548+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:30.551+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:30.553+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:30.554+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:30.555+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:30.557+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:30.559+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.562+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.564+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+]]></system-out>
+  </testcase>
+  <testcase name="adminUserManagement_UpdateStatus" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.474">
+    <system-out><![CDATA[2026-10-17T09:13:30.664+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.665+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.665+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.668+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.669+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:30.673+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:30.674+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:30.675+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:30.677+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:30.678+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:30.679+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:30.680+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:30.682+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:30.683+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:30.685+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:30.686+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:30.687+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:30.689+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:30.690+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:30.691+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:30.692+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:30.693+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:30.695+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:30.705+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:30.707+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.707+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:30.709+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:30.765+05:30  INFO [75e31d45-8f76-46b5-b869-88ec180b8969] c.i.a.service.impl.AdminServiceImpl : User bob status updated to SUSPENDED by admin 9aef562c-44c5-4a39-9081-4690d06322a9
+2026-10-17T09:13:30.767+05:30  INFO [] c.i.a.s.impl.AuditLogServiceImpl : AUDIT_LOG: user=[9aef562c-44c5-4a39-9081-4690d06322a9] action=[ADMIN_UPDATE_USER_STATUS] resource=[USER:c10077e7-b15b-4c19-b8dd-a726f4a10c7d] ip=[null]
+2026-10-17T09:13:30.787+05:30  INFO [4273f600-d362-4ab6-a19a-ec9fdaaca7c2] c.i.a.service.impl.AdminServiceImpl : User bob status updated to ACTIVE by admin 9aef562c-44c5-4a39-9081-4690d06322a9
+2026-10-17T09:13:31.102+05:30  INFO [] c.i.a.s.impl.AuditLogServiceImpl : AUDIT_LOG: user=[9aef562c-44c5-4a39-9081-4690d06322a9] action=[ADMIN_UPDATE_USER_STATUS] resource=[USER:c10077e7-b15b-4c19-b8dd-a726f4a10c7d] ip=[null]
+2026-10-17T09:13:31.123+05:30  WARN [11004fca-e247-4d6a-9294-f79d514f51b5] c.i.c.e.GlobalExceptionHandler : Application exception [BAD_REQUEST]: Administrators cannot change their own account status at /api/v1/admin/users/9aef562c-44c5-4a39-9081-4690d06322a9/status
+]]></system-out>
+  </testcase>
+  <testcase name="adminEmailConfigs_NonAdmin_Forbidden" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.119">
+    <system-out><![CDATA[2026-10-17T09:13:31.141+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.143+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.144+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.146+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.149+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.153+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:31.154+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:31.156+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:31.158+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:31.159+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:31.160+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:31.162+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:31.163+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:31.164+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:31.166+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:31.168+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:31.169+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:31.170+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:31.171+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:31.173+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:31.175+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:31.176+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:31.177+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:31.178+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:31.179+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.181+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.182+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:31.231+05:30  WARN [b753a8e1-dfe0-415d-9ead-c6704e4e3f91] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/email-configs: Access Denied
+2026-10-17T09:13:31.245+05:30  WARN [dadd45c2-803e-4a03-9865-62b09dc7e254] c.i.c.e.GlobalExceptionHandler : Access denied at /api/v1/admin/email-configs: Access Denied
+]]></system-out>
+  </testcase>
+  <testcase name="createReport_TargetNotFound_Returns404" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.117">
+    <system-out><![CDATA[2026-10-17T09:13:31.264+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.265+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.267+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.268+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.270+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.275+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:31.277+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:31.278+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:31.281+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:31.284+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:31.286+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:31.288+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:31.288+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:31.289+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:31.291+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:31.292+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:31.293+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:31.295+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:31.296+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:31.297+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:31.299+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:31.300+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:31.301+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:31.303+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:31.304+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.305+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.307+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:31.364+05:30  WARN [e7a2d704-dea2-4262-88c4-58e308488eb1] c.i.c.e.GlobalExceptionHandler : Application exception [RESOURCE_NOT_FOUND]: Post not found with ID: 74aa95eb-cc2d-4aee-b733-d15254f1d523 at /api/v1/reports
+]]></system-out>
+  </testcase>
+  <testcase name="adminUserManagement_UpdateRole" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.13">
+    <system-out><![CDATA[2026-10-17T09:13:31.384+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.385+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.386+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.388+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.389+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.395+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:31.396+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:31.397+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:31.399+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:31.400+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:31.401+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:31.403+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:31.404+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:31.405+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:31.407+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:31.408+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:31.410+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:31.411+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:31.412+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:31.414+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:31.415+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:31.416+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:31.418+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:31.418+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:31.420+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.421+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.422+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:31.480+05:30  INFO [0cdb82a7-e83b-4493-9ff8-87123a68da25] c.i.a.service.impl.AdminServiceImpl : User bob role updated to ROLE_MODERATOR by admin 96ce4901-3398-4ba2-a4a2-210c685851de
+2026-10-17T09:13:31.482+05:30  INFO [] c.i.a.s.impl.AuditLogServiceImpl : AUDIT_LOG: user=[96ce4901-3398-4ba2-a4a2-210c685851de] action=[ADMIN_UPDATE_USER_ROLE] resource=[USER:c52afe4a-9fcc-4064-a685-a31b59a3631d] ip=[null]
+2026-10-17T09:13:31.498+05:30  WARN [284f8ba2-ffb5-496e-9d69-c1088a401f80] c.i.c.e.GlobalExceptionHandler : Application exception [BAD_REQUEST]: Administrators cannot change their own role at /api/v1/admin/users/96ce4901-3398-4ba2-a4a2-210c685851de/role
+]]></system-out>
+  </testcase>
+  <testcase name="adminEmailConfigs_SendTestEmail_Success" classname="com.instagramclone.admin.AdminIntegrationTest" time="0.104">
+    <system-out><![CDATA[2026-10-17T09:13:31.514+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [ACCOUNT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.516+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SECURITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.517+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [SOCIAL_ACTIVITY] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.518+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [MESSAGING] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.519+05:30  INFO [] c.i.m.s.i.DynamicEmailConfigServiceImpl : Initialized default dynamic email configuration for category [DIGEST_PRODUCT] -> lastsingh008@gmail.com
+2026-10-17T09:13:31.524+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WELCOME]
+2026-10-17T09:13:31.525+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_VERIFICATION]
+2026-10-17T09:13:31.526+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_OTP]
+2026-10-17T09:13:31.528+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_RESET]
+2026-10-17T09:13:31.529+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PASSWORD_CHANGED]
+2026-10-17T09:13:31.530+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [EMAIL_ADDRESS_CHANGED]
+2026-10-17T09:13:31.531+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [ACCOUNT_RECOVERY]
+2026-10-17T09:13:31.533+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_LOGIN]
+2026-10-17T09:13:31.534+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_DEVICE_LOGIN]
+2026-10-17T09:13:31.536+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SUSPICIOUS_LOGIN]
+2026-10-17T09:13:31.536+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [SECURITY_SETTINGS_CHANGED]
+2026-10-17T09:13:31.538+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [NEW_FOLLOWER]
+2026-10-17T09:13:31.539+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [FOLLOW_REQUEST]
+2026-10-17T09:13:31.541+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_LIKED]
+2026-10-17T09:13:31.542+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [POST_COMMENTED]
+2026-10-17T09:13:31.543+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_MENTIONED]
+2026-10-17T09:13:31.545+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [USER_TAGGED]
+2026-10-17T09:13:31.546+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [UNREAD_MESSAGE_DIGEST]
+2026-10-17T09:13:31.547+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [MISSED_MESSAGE_REMINDER]
+2026-10-17T09:13:31.548+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [DAILY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.549+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [WEEKLY_ACTIVITY_DIGEST]
+2026-10-17T09:13:31.550+05:30  INFO [] c.i.m.s.i.DynamicEmailTemplateServiceImpl : Initialized default dynamic email template for [PRODUCT_ANNOUNCEMENT]
+2026-10-17T09:13:31.606+05:30  INFO [84a1a7b3-c5cf-47d1-80e0-865be81f8a57] c.i.m.s.i.DynamicEmailConfigServiceImpl : Email provider unavailable/mock mode. Test email for category [ACCOUNT] to [admin-test@example.com] from [lastsingh008@gmail.com] simulated successfully.
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.instagramclone.mail.EmailOtpDeliveryTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.735 s -- in com.instagramclone.mail.EmailOtpDeliveryTest

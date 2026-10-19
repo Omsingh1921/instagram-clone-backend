@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.instagramclone.user.TokenBlacklistAndRevocationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.302 s -- in com.instagramclone.user.TokenBlacklistAndRevocationTest

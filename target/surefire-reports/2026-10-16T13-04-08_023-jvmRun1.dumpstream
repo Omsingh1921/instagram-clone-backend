@@ -1,0 +1,15 @@
+# Created at 2026-10-16T13:04:28.169
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2026-10-16T13:04:28.170
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# There is insufficient memory for the Java Runtime Environment to continue.'.
+
+# Created at 2026-10-16T13:04:28.171
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Native memory allocation (mmap) failed to map 62914560 bytes. Error detail: G1 virtual space'.
+
+# Created at 2026-10-16T13:04:28.171
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# An error report file with more information is saved as:'.
+
+# Created at 2026-10-16T13:04:28.246
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# A:\Instragram-clone\backend\hs_err_pid16156.log'.
+

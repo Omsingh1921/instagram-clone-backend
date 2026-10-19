@@ -1,0 +1,19 @@
+package com.instagramclone.common.event;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class MessageEvent {
+
+    private UUID messageId;
+    private UUID conversationId;
+    private UUID senderId;
+}

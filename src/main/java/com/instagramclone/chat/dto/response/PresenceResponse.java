@@ -1,0 +1,18 @@
+package com.instagramclone.chat.dto.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class PresenceResponse {
+    private UUID userId;
+    private boolean online;
+    private String lastSeen;
+}

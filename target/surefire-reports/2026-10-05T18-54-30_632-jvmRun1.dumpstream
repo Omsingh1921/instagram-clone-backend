@@ -1,0 +1,27 @@
+# Created at 2026-10-05T18:54:57.144
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2026-10-05T18:54:57.147
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# There is insufficient memory for the Java Runtime Environment to continue.'.
+
+# Created at 2026-10-05T18:54:57.149
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Native memory allocation (malloc) failed to allocate 796064 bytes. Error detail: Chunk::new'.
+
+# Created at 2026-10-05T18:54:57.151
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# An error report file with more information is saved as:'.
+
+# Created at 2026-10-05T18:54:57.257
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# A:\Instragram-clone\backend\hs_err_pid3748.log'.
+
+# Created at 2026-10-05T18:54:57.598
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[thread 13544 also had an error]'.
+
+# Created at 2026-10-05T18:54:57.600
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2026-10-05T18:54:57.601
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Compiler replay data is saved as:'.
+
+# Created at 2026-10-05T18:54:57.695
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# A:\Instragram-clone\backend\replay_pid3748.log'.
+
