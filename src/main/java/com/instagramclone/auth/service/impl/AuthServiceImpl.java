@@ -847,6 +847,9 @@ public class AuthServiceImpl implements IAuthService {
                     .timestamp(now)
                     .build());
 
+            System.out.println("\n========================================================");
+            System.out.println("  >>> [PASSWORD RESET URL] User: " + user.getUsername() + " | URL: " + mailProperties.getResetUrl() + "?token=" + rawToken + " <<<");
+            System.out.println("========================================================\n");
             log.info("Issued password reset token for user ID: {}", user.getId());
             auditLogService.record(user.getId(), "PASSWORD_RESET_REQUESTED", "USER", user.getId(), null,
                     "Password reset requested for user: " + user.getUsername());

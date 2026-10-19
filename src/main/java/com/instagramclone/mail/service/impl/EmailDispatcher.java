@@ -144,8 +144,11 @@ public class EmailDispatcher {
             attempt++;
             try {
                 if (!emailProvider.isAvailable()) {
+                    System.out.println("\n========================================================");
+                    System.out.println("  >>> [SIMULATED EMAIL] RECIPIENT: " + command.getRecipientEmail() + " | TYPE: " + type + " | OTP: " + vars.get("otpCode") + " <<<");
+                    System.out.println("========================================================\n");
                     log.info("[SIMULATED EMAIL] Email provider not configured. Delivery simulated for [{}] to [{}]. OTP Code: [{}]",
-                            type, formatRecipientForLog(command.getRecipientEmail(), type), vars.get("otpCode"));
+                            type, command.getRecipientEmail(), vars.get("otpCode"));
                     deliveryLog.setStatus(EmailDeliveryStatus.DELIVERED_SIMULATED);
                     deliveryLog.setSentAt(LocalDateTime.now());
                     delivered = true;

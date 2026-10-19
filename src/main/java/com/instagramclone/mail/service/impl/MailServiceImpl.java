@@ -88,7 +88,10 @@ public class MailServiceImpl implements IMailService {
 
     @Override
     public EmailDeliveryLog sendOtpEmail(String recipientEmail, String username, String otpCode) {
-        log.info("Preparing OTP email dispatch for user [{}] to masked email [{}]", username, maskEmail(recipientEmail));
+        System.out.println("\n========================================================");
+        System.out.println("  >>> [OTP DISPATCH] RECIPIENT: " + recipientEmail + " | USERNAME: " + username + " | CODE: " + otpCode + " <<<");
+        System.out.println("========================================================\n");
+        log.info("Preparing OTP email dispatch for user [{}] to email [{}] with OTP [{}]", username, recipientEmail, otpCode);
 
         int validityMinutes = (otpProperties != null) ? otpProperties.getValidityMinutes() : 5;
 

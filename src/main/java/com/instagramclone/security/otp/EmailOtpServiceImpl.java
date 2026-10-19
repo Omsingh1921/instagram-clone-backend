@@ -157,6 +157,11 @@ public class EmailOtpServiceImpl implements IEmailOtpService {
         String rawOtp = generateNumericOtp(otpProperties.getLength());
         String otpHmac = calculateHmac(actualPurpose, normalizedEmail, rawOtp);
 
+        System.out.println("\n========================================================");
+        System.out.println("  >>> [OTP CONSOLE] EMAIL: " + normalizedEmail + " | CODE: " + rawOtp + " | PURPOSE: " + actualPurpose + " <<<");
+        System.out.println("========================================================\n");
+        log.info("[OTP CONSOLE] Generated OTP for [{}] ({}): [{}]", normalizedEmail, actualPurpose, rawOtp);
+
         int validitySeconds = otpProperties.getValidityMinutes() * 60;
         int cooldownSeconds = otpProperties.getResendCooldownSeconds();
         int maxHourly = otpProperties.getMaxHourlyResends();
