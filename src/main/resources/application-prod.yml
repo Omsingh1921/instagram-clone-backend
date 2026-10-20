@@ -46,6 +46,13 @@ app:
   security:
     cors:
       allowed-origins: ${CORS_ALLOWED_ORIGINS:https://likeinstagra.netlify.app}
+  cloudinary:
+    cloud-name: ${CLOUDINARY_CLOUD_NAME:mmryuaqu}
+    api-key: ${CLOUDINARY_API_KEY:774434692749313}
+    api-secret: ${CLOUDINARY_API_SECRET:_j3wNV79jyvA55tCOQ6Yd0Lfo4k}
+    fallback-on-failure: ${CLOUDINARY_FALLBACK_ON_FAILURE:false}
+    max-retries: ${CLOUDINARY_MAX_RETRIES:3}
+    retry-backoff-ms: ${CLOUDINARY_RETRY_BACKOFF_MS:500}
 
 management:
   health:

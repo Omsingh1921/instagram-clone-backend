@@ -218,11 +218,11 @@ app:
     dir: ${APP_UPLOAD_DIR:uploads}
 
   cloudinary:
-    cloud-name: ${CLOUDINARY_CLOUD_NAME:}
-    api-key: ${CLOUDINARY_API_KEY:}
-    api-secret: ${CLOUDINARY_API_SECRET:}
-    fallback-on-failure: ${CLOUDINARY_FALLBACK_ON_FAILURE:true}
-    max-retries: ${CLOUDINARY_MAX_RETRIES:2}
+    cloud-name: ${CLOUDINARY_CLOUD_NAME:mmryuaqu}
+    api-key: ${CLOUDINARY_API_KEY:774434692749313}
+    api-secret: ${CLOUDINARY_API_SECRET:_j3wNV79jyvA55tCOQ6Yd0Lfo4k}
+    fallback-on-failure: ${CLOUDINARY_FALLBACK_ON_FAILURE:false}
+    max-retries: ${CLOUDINARY_MAX_RETRIES:3}
     retry-backoff-ms: ${CLOUDINARY_RETRY_BACKOFF_MS:500}
 
   security:
@@ -238,9 +238,9 @@ app:
 
   admin:
     seed: ${APP_ADMIN_SEED:true}
-    username: ${APP_ADMIN_USERNAME:admin}
-    email: ${APP_ADMIN_EMAIL:admin@instagram.com}
-    password: ${APP_ADMIN_PASSWORD:Admin@12345}
+    username: ${APP_ADMIN_USERNAME:}
+    email: ${APP_ADMIN_EMAIL:}
+    password: ${APP_ADMIN_PASSWORD:}
     display-name: ${APP_ADMIN_DISPLAY_NAME:System Administrator}
 
 # Actuator Health & Observability

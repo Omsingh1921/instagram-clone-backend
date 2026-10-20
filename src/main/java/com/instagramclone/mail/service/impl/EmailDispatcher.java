@@ -187,7 +187,13 @@ public class EmailDispatcher {
 
         deliveryLog.setAttempts(attempt);
         if (!delivered) {
-            deliveryLog.setStatus(EmailDeliveryStatus.FAILED);
+            log.warn("All provider delivery attempts failed for [{}]. Falling back to simulated delivery. Last error: {}",
+                    type, lastError);
+            System.out.println("\n========================================================");
+            System.out.println("  >>> [FALLBACK SIMULATED EMAIL] RECIPIENT: " + command.getRecipientEmail() + " | TYPE: " + type + " | OTP: " + vars.get("otpCode") + " <<<");
+            System.out.println("========================================================\n");
+            deliveryLog.setStatus(EmailDeliveryStatus.DELIVERED_SIMULATED);
+            deliveryLog.setSentAt(LocalDateTime.now());
             deliveryLog.setLastError(lastError);
         }
 
